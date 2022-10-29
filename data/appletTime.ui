@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+	<object id="appletTimeButton" class="GtkMenuButton">
+		<property name="has-frame">false</property>
+		<property name="direction">GTK_ARROW_NONE</property>
+		<property name="popover">appletTime</property>
+		<property name="label">00:00</property>
+	</object>
+	
+	<object id="appletTime" class="GtkPopover">
+		<property name="has-arrow">false</property>
+	</object>
+</interface>

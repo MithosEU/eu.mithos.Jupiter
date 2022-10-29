@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+
+	<menu id="panelMenuDefault">
+		<submenu>
+			<attribute name="label">Schreibtisch</attribute>
+			<section>
+				<item>
+					<attribute name="label">Hintergrund ändern</attribute>
+				</item>
+			</section>
+		</submenu>
+		<submenu>
+			<attribute name="label">Fokus</attribute>
+			<section>
+				<item>
+					<attribute name="label">...</attribute>
+				</item>
+			</section>
+		</submenu>
+		<submenu>
+			<attribute name="label">Hilfe</attribute>
+			<section>
+				<item>
+					<attribute name="label">Handbuch</attribute>
+				</item>
+				<item>
+					<attribute name="label">Info</attribute>
+				</item>
+			</section>
+		</submenu>
+	</menu>
+	
+	<menu id="panelMenuWindowManagement">
+		<section>
+			<item>
+				<attribute name="label">Gesammter Bildschirm</attribute>
+			</item>
+			<item>
+				<attribute name="label">Linke Hälfte</attribute>
+			</item>
+			<item>
+				<attribute name="label">Rechte Hälfte</attribute>
+			</item>
+			<item>
+				<attribute name="label">Anwendung doppeln</attribute>
+			</item>
+		</section>
+		<section>
+			<item>
+				<attribute name="label">Anwendung anheften</attribute>
+			</item>
+			<item>
+				<attribute name="label">Anwendung schließen</attribute>
+			</item>
+		</section>
+	</menu>
+	<object id="panelMenuWindowManagementPopover" class="GtkPopoverMenu">
+		<property name="menu-model">panelMenuWindowManagement</property>
+		<property name="has-arrow">false</property>
+	</object>
+
+	<object id="panelWindow" class="GtkApplicationWindow">
+		<property name="title">eu.mithos.Jupiter-panelWindow</property>
+		<property name="default-width">1600</property>
+		<property name="default-height">30</property>
+		<property name="decorated">false</property>
+		<child>
+			<object class="GtkBox">
+				<property name="orientation">horizontal</property>
+				<child>
+					<object class="GtkMenuButton">
+						<property name="has-frame">false</property>
+						<property name="icon-name">view-agenda-symbolic</property>
+						<property name="popover">panelMenuWindowManagementPopover</property>
+					</object>
+				</child>
+				<child>
+					<object id="panelMenuBar" class="GtkPopoverMenuBar">
+						<property name="menu-model">panelMenuDefault</property>
+					</object>
+				</child>
+				<child>
+					<object class="GtkLabel">
+						<property name="label"></property>
+						<property name="hexpand">true</property>
+					</object>
+				</child>
+				<child>
+					<object id="appletBox" class="GtkBox">
+						<property name="name">appletBox</property>
+						<property name="orientation">horizontal</property>
+					</object>
+				</child>
+			</object>
+		</child>
+	</object>
+</interface>

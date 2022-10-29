@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+	<object id="appletAudioButton" class="GtkMenuButton">
+		<property name="has-frame">false</property>
+		<property name="direction">GTK_ARROW_NONE</property>
+		<property name="popover">appletAudio</property>
+		<property name="icon-name">volume-down-symbolic</property>
+	</object>
+	
+	<object id="appletAudio" class="GtkPopover">
+		<property name="has-arrow">false</property>
+	</object>
+</interface>

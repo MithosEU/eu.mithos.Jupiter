@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+	<menu id="testMenu">
+		<section>
+			<item>
+				<attribute name="label">Benutzername</attribute>
+			</item>
+		</section>
+		<section>
+			<item>
+				<attribute name="label">Sperren</attribute>
+			</item>
+			<item>
+				<attribute name="label">Ausschalten</attribute>
+			</item>
+		</section>
+	</menu>
+
+	<object id="appletUserButton" class="GtkMenuButton">
+		<property name="has-frame">false</property>
+		<property name="direction">GTK_ARROW_NONE</property>
+		<property name="popover">appletUser</property>
+		<property name="label">⏻ benutzer</property>
+	</object>
+	
+	<object id="appletUser" class="GtkPopoverMenu">
+		<property name="menu-model">testMenu</property>
+		<property name="has-arrow">false</property>
+	</object>
+</interface>

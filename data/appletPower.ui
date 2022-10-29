@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+	<object id="appletPowerButton" class="GtkMenuButton">
+		<property name="has-frame">false</property>
+		<property name="direction">GTK_ARROW_NONE</property>
+		<property name="popover">appletPower</property>
+		<property name="icon-name">power-eco-symbolic</property>
+	</object>
+	
+	<object id="appletPower" class="GtkPopover">
+		<property name="has-arrow">false</property>
+		<child>
+			<object class="GtkBox">
+				<property name="orientation">vertical</property>
+				<child>
+					<object class="GtkLabel">
+						<property name="max-width-chars">30</property>
+						<property name="wrap">true</property>
+						<property name="margin-start">10</property>
+						<property name="margin-end">10</property>
+						<property name="margin-top">10</property>
+						<property name="margin-bottom">10</property>
+						<property name="label">Dieses Gerät verfügt über einen festen Stromanschluss. Dennoch wird versucht Energie zu sparen.</property>
+					</object>
+				</child>
+				<child>
+					<object class="GtkButton">
+						<property name="has-frame">false</property>
+						<property name="label">Energiesparen heute deaktivieren</property>
+					</object>
+				</child>
+			</object>
+		</child>
+	</object>
+</interface>

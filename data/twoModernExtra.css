@@ -1,0 +1,86 @@
+@define-color Main lighter(rgb(107, 115, 88));
+@define-color MainSemi alpha(@Main, 0.7);
+@define-color Text white;
+@define-color TextSemi alpha(@Text, 0.7);
+@define-color Highlight @Main;
+@define-color HighlightSemi @MainSemi;
+
+* {
+	all: unset;
+	font-family: "Jost*";
+	font-weight: 300;
+	font-size: 14px;
+	background-image: none;
+}
+
+.background{
+	background-color: @Main;
+	color: @Text;
+}
+
+popover.background{
+	background-color: @MainSemi;
+	padding-bottom: 5px;
+}
+
+popover popover{
+	margin-left: 10px;
+}
+
+popover separator{
+	min-width: 2px;
+	min-height: 2px;
+	background-color: @Text;
+	opacity: 0.1;
+}
+
+button, item, modelbutton{
+	margin: 5px;
+}
+
+button{
+	
+}
+
+popover modelbutton{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+modelbutton:hover, button:hover, item label:hover{
+	text-shadow: 0 0 2px @TextSemi;
+	-gtk-icon-shadow: 0 0 2px @TextSemi;
+}
+
+menubar > item:first-child *{
+	font-weight: 400;
+}
+
+menubar > item:first-child * > *{
+	font-weight: 300;
+}
+
+#appletBox button *{
+	font-weight: 400;
+}
+
+.dashButton, .dashButton button{
+	all: unset;
+	min-height: 60px;
+	min-width: 60px;
+	-gtk-icon-size: 60px;
+	border: 0px;
+}
+
+#dockWindow{
+	background-color: transparent;
+}
+
+#dockArea{
+	background-color: @MainSemi;
+	min-width: 5px;
+}
+
+revealer, #menuWindow{
+	background-color: @MainSemi;
+}

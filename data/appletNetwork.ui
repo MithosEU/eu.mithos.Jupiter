@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+	<object id="appletNetworkButton" class="GtkMenuButton">
+		<property name="has-frame">false</property>
+		<property name="direction">GTK_ARROW_NONE</property>
+		<property name="popover">appletNetwork</property>
+		<property name="icon-name">signal-wifi-not-symbolic</property>
+	</object>
+	
+	<object id="appletNetwork" class="GtkPopover">
+		<property name="has-arrow">false</property>
+	</object>
+</interface>

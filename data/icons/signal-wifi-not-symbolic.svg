@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24px"
+   height="24px"
+   stroke-width="1.49"
+   viewBox="0 0 24 24"
+   fill="none"
+   color="#9a9996"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="signal-wifi-not-symbolic.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="23.805929"
+     inkscape:cx="6.5949957"
+     inkscape:cy="15.857394"
+     inkscape:window-width="1680"
+     inkscape:window-height="973"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     style="color:#9a9996;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+     d="m 12,6.36857 c -2.6519774,0 -5.3042279,0.804831 -7.4472657,2.4121095 -0.3289578,0.247042 -0.3954105,0.71396 -0.1484375,1.042969 0.2470419,0.3289565 0.7139595,0.3954095 1.0429687,0.148437 3.7139163,-2.7854371 9.3915525,-2.7854371 13.1054685,0 0.329009,0.2469725 0.795927,0.1805205 1.042969,-0.148437 0.246973,-0.329009 0.180521,-0.795927 -0.148437,-1.042969 C 17.304228,7.173401 14.651977,6.36857 12,6.36857 Z m 0,4.726562 c -1.331748,0 -2.6644458,0.383051 -3.8945313,1.148438 -0.3498457,0.217641 -0.4566029,0.677922 -0.2382813,1.027343 0.2176409,0.349846 0.6779225,0.456603 1.0273438,0.238281 2.0398248,-1.269224 4.1711128,-1.269224 6.2109378,0 0.349421,0.218322 0.809702,0.111565 1.027343,-0.238281 0.218322,-0.349421 0.111565,-0.809702 -0.238281,-1.027343 C 14.664446,11.478183 13.331748,11.095132 12,11.095132 Z m -0.02539,5.035156 c -0.197461,0.0097 -0.382952,0.09757 -0.515625,0.244141 l -0.0098,0.01172 c -0.276017,0.303888 -0.25418,0.7738 0.04883,1.050781 0.304149,0.277331 0.775563,0.255464 1.052734,-0.04883 l 0.0098,-0.01172 c 0.277331,-0.304149 0.255464,-0.775563 -0.04883,-1.052734 -0.146262,-0.133211 -0.339502,-0.202777 -0.53711,-0.19336 z"
+     id="path2"
+     sodipodi:nodetypes="sccccccssccccccssccccccss" />
+</svg>

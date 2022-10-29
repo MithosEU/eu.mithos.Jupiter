@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+	<object id="menuWindow" class="GtkApplicationWindow">
+		<property name="title">eu.mithos.Jupiter-menuWindow</property>
+		<property name="default-width">200</property>
+		<property name="default-height">900</property>
+		<property name="decorated">false</property>
+		<property name="name">menuWindow</property>
+		<child>
+			<object class="GtkBox">
+				<property name="valign">start</property>
+				<child>
+					<object id="tmpLosEntry" class="GtkEntry">
+					</object>
+				</child>
+				<child>
+					<object id="tmpLosButton" class="GtkButton">
+						<property name="label">Los</property>
+					</object>
+				</child>
+			</object>
+		</child>
+	</object>
+
+	<object id="dockWindow" class="GtkApplicationWindow">
+		<property name="title">eu.mithos.Jupiter-dockWindow</property>
+		<property name="default-width">80</property>
+		<property name="default-height">900</property>
+		<property name="decorated">false</property>
+		<property name="name">dockWindow</property>
+		<child>
+			<object id="dockContainer" class="GtkBox">
+				<property name="orientation">horizontal</property>
+				<child>
+					<object class="GtkBox">
+						<property name="name">dockArea</property>
+					</object>
+				</child>
+				<child>
+					<object id="dockRevealer" class="GtkRevealer">
+						<property name="reveal-child">true</property>
+						<property name="transition-type">GTK_REVEALER_TRANSITION_TYPE_NONE</property>
+						<child>
+							<object class="GtkBox">
+								<property name="orientation">vertical</property>
+								<property name="halign">center</property>
+								<child>
+									<object id="dockMenuButton" class="GtkButton">
+										<property name="icon-name">search-sys</property>
+											<property name="margin-top">5</property>
+											<property name="margin-end">5</property>
+											<property name="margin-bottom">5</property>
+										<style>
+											<class name="dashButton" />
+										</style>
+									</object>
+								</child>
+								<child>
+									<object id="applistBox" class="GtkBox">
+										<property name="orientation">vertical</property>
+										<property name="spacing">5</property>
+									</object>
+								</child>
+							</object>
+						</child>
+					</object>
+				</child>
+			</object>
+		</child>
+	</object>
+</interface>
