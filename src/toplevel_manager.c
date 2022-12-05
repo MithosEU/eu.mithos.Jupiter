@@ -71,6 +71,10 @@ static void z_toplevel_handle_app(void** data, struct zwlr_foreign_toplevel_hand
 	*data = (void *)appButton;
 }
 
+static void action_group_add(GActionGroup *ag){
+	g_action_group_list_actions(G_ACTION_GROUP(ag));
+}
+
 //handle activation of window
 static void wh_state(void** data, struct zwlr_foreign_toplevel_handle_v1 *, struct wl_array *state){
 	uint32_t *entry;
@@ -83,6 +87,7 @@ static void wh_state(void** data, struct zwlr_foreign_toplevel_handle_v1 *, stru
 				GDBusMenuModel* dbusMenuModel = g_dbus_menu_model_get(dbusConnection, appId, dbusPath);
 				gchar* dbusPathAction = g_strdup_printf("/%s", appIdPath);
 				GDBusActionGroup* dbusActionGroup = g_dbus_action_group_get(dbusConnection, appId, dbusPathAction);
+				g_signal_connect(dbusActionGroup, "action-added", G_CALLBACK(action_group_add), NULL);
 				g_action_group_list_actions(G_ACTION_GROUP(dbusActionGroup));
 				panel_set_menu_model(dbusMenuModel, dbusActionGroup);
 			}else{
