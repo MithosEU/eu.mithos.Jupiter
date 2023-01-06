@@ -20,7 +20,7 @@ void show_dock(GtkEventControllerMotion*, gdouble x){
 }
 
 void hide_dock(){
-	if(menuOpen == FALSE){
+	if(menuOpen == FALSE && FALSE){ //todo implement setting if dock should be hidden
 		GtkWidget* dockRevealer = GTK_WIDGET(gtk_builder_get_object(builder, "dockRevealer"));
 		gtk_widget_hide(dockRevealer);
 		int cHeight = gtk_widget_get_height(dockWindow);
@@ -61,7 +61,7 @@ void init_dock(GtkApplication* app){
 	
 	//audohide etc here (to do)
 	GtkWidget* dockRevealer = GTK_WIDGET(gtk_builder_get_object(builder, "dockRevealer"));
-	gtk_widget_hide(dockRevealer);
+	//gtk_widget_hide(dockRevealer);
 	GtkEventController* eventController = gtk_event_controller_motion_new();
 	g_signal_connect(G_OBJECT(eventController), "motion", G_CALLBACK(show_dock), NULL);
 	g_signal_connect(G_OBJECT(eventController), "leave", G_CALLBACK(hide_dock), NULL);
