@@ -55,7 +55,18 @@ static void z_toplevel_handle_app(void** data, struct zwlr_foreign_toplevel_hand
 	
 	appButton = gtk_button_new();	
 	gtk_widget_set_name(appButton, appID);
-	gtk_button_set_icon_name(GTK_BUTTON(appButton), "application-default-icon");
+	
+	//Look for a fitting icon
+	GtkIconTheme* icTh = gtk_icon_theme_get_for_display(gdk_display_get_default());
+	if(gtk_icon_theme_has_icon(icTh, appID)){
+		GtkWidget* img = gtk_image_new_from_icon_name(appID);
+		gtk_image_set_pixel_size(GTK_IMAGE(img), 60);
+		gtk_button_set_child(GTK_BUTTON(appButton), img);
+	} else {
+		gtk_button_set_icon_name(GTK_BUTTON(appButton), "application-default-icon");
+	}
+	// ---
+	
 	gtk_style_context_add_class(gtk_widget_get_style_context(appButton), "dashButton");
 	gtk_box_prepend(GTK_BOX(applistBox), appButton);
 	
